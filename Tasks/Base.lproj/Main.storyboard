@@ -20,13 +20,30 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="FYc-j5-dFX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="FYc-j5-dFX" customClass="TaskCell" customModule="Tasks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FYc-j5-dFX" id="uC8-Mk-Jec">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNI-eR-pSw">
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FNI-eR-pSw" secondAttribute="trailing" id="4Kg-n1-nYz"/>
+                                                <constraint firstItem="FNI-eR-pSw" firstAttribute="top" secondItem="uC8-Mk-Jec" secondAttribute="topMargin" id="9yL-gB-jLC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FNI-eR-pSw" secondAttribute="bottom" id="Dvo-YQ-lTh"/>
+                                                <constraint firstItem="FNI-eR-pSw" firstAttribute="leading" secondItem="uC8-Mk-Jec" secondAttribute="leadingMargin" id="dgA-gw-ba6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="taskLabel" destination="FNI-eR-pSw" id="bhT-4y-3l4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

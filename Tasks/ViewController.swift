@@ -31,6 +31,9 @@ class ViewController: UIViewController {
     }
     
     func updateTasks() {
+        // removes duplicates
+        tasks.removeAll()
+        
         guard let count = UserDefaults().value(forKey: "count") as? Int else {
             return
         }
@@ -39,8 +42,10 @@ class ViewController: UIViewController {
             if let task = UserDefaults().value(forKey: "task_\(x+1)")as? String {
                 tasks.append(task)
             }
-            
         }
+        
+        // reload tableView
+        tableView.reloadData()
     }
     
     
@@ -70,9 +75,9 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TaskCell
         
-        //cell.textLabel? = tasks[indexPath.row]
+        cell.taskLabel?.text = tasks[indexPath.row]
         
         return cell
     }
