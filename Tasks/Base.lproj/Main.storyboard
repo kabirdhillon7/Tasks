@@ -21,14 +21,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="task cell" id="FYc-j5-dFX" customClass="TaskCell" customModule="Tasks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="42.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FYc-j5-dFX" id="uC8-Mk-Jec">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="42.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNI-eR-pSw">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="20.666666666666671"/>
+                                                    <rect key="frame" x="20" y="11" width="353" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -112,13 +112,30 @@
                     <view key="view" contentMode="scaleToFill" id="Suf-dl-iAS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHs-wW-EAB">
+                                <rect key="frame" x="12" y="71" width="369" height="735"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bTq-rQ-f2s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pHs-wW-EAB" firstAttribute="leading" secondItem="bTq-rQ-f2s" secondAttribute="leading" constant="12" id="7dp-s2-1jb"/>
+                            <constraint firstItem="pHs-wW-EAB" firstAttribute="top" secondItem="bTq-rQ-f2s" secondAttribute="top" constant="12" id="TQ1-07-gtT"/>
+                            <constraint firstItem="bTq-rQ-f2s" firstAttribute="trailing" secondItem="pHs-wW-EAB" secondAttribute="trailing" constant="12" id="lVo-xD-dQc"/>
+                            <constraint firstItem="bTq-rQ-f2s" firstAttribute="bottom" secondItem="pHs-wW-EAB" secondAttribute="bottom" constant="12" id="xai-AF-tFI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="pHs-wW-EAB" id="mJb-Nz-EI8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHi-aF-Fl4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2001" y="437"/>
+            <point key="canvasLocation" x="2000.7633587786258" y="436.61971830985919"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mXV-vK-Ksb">
