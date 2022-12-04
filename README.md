@@ -6,7 +6,7 @@ Tasks is an app that allows users to add to-do items.
 #### REQUIRED (10pts)
 
 - [x] Allows adding a to-do task item
-- [x] 
+- [x] Allows seeing task in a detailed View Controller
 
 ### App Walkthough GIF
 
