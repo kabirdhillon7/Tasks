@@ -12,7 +12,6 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var field: UITextField!
     var update: (() -> Void)?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         field.delegate = self
@@ -22,7 +21,6 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         saveTask()
         
         return true
@@ -43,10 +41,8 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         UserDefaults().set(text, forKey: "task_\(newCount)")
         
         update?()
+        
         navigationController?.popViewController(animated: true)
-        
-        
-        
     }
     
 

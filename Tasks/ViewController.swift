@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             }
         }
         
-        // reload tableView
+        // Get all current saved tasks via reload tableView
         tableView.reloadData()
     }
     
@@ -86,8 +86,5 @@ extension ViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
-    
 }
 
