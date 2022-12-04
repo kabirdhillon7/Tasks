@@ -75,7 +75,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TaskCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "task cell", for: indexPath) as! TaskCell
         
         cell.taskLabel?.text = tasks[indexPath.row]
         
