@@ -21,7 +21,6 @@ Some of the main features include:
 
 - iOS 16.0 or later
 - iPhone 8, iPhone SE (2nd generation), or newer
-- iPod touch 7th generation or newer
 
 ### Demo
 <img src="https://user-images.githubusercontent.com/74223402/217118495-ab6cb25d-eeec-491e-9328-724d47b58a11.gif" width=250><br>
