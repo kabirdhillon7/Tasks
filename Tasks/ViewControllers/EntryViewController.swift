@@ -8,14 +8,14 @@
 import UIKit
 
 class EntryViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet var field: UITextField!
     var update: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         field.delegate = self
-
+        
         // Do any additional setup after loading the view.
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveTask))
     }
@@ -44,6 +44,4 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         
         navigationController?.popViewController(animated: true)
     }
-    
-
 }

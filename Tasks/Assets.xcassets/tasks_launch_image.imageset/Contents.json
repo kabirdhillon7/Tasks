@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "CheckMarkLogoIcon.png",
+      "filename" : "tasks_launch_image.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "#DD2C00-3.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

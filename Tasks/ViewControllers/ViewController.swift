@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         }
         
         updateTasks()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        updateTasks()
         
     }
     
@@ -48,7 +52,6 @@ class ViewController: UIViewController {
         tableView.reloadData()
     }
     
-    
     @IBAction func didTapAdd(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
         vc.title = "New Task"
@@ -59,8 +62,6 @@ class ViewController: UIViewController {
         }
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-
 }
 
 extension ViewController: UITableViewDelegate {
@@ -85,6 +86,17 @@ extension ViewController: UITableViewDataSource {
         cell.taskLabel?.text = tasks[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            tasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 }
 
