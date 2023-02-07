@@ -1,5 +1,5 @@
 # Tasks
-Tasks is an iOS app that allows users to add to-do items.
+Tasks is an iOS app that allows users to add, view, and delete to-do items.
 
 ## Table of Contents
 
